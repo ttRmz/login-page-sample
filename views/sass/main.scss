@@ -1,0 +1,235 @@
+@import './variables/font';
+@import './variables/colors';
+@import './animations';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: $main_font;
+}
+
+.login__title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 4;
+  text-transform: uppercase;
+  font-family: Poppins;
+  font-size: 32px;
+  color: $white;
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+.main__wrapper {
+  position: relative;
+  overflow: hidden;
+  background: $lightblue;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../images/river.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.wrapper {
+  &__half {
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--left {
+      flex-direction: row-reverse;
+    }
+
+    &--right {
+      flex-direction: row;
+    }
+  }
+
+  &--overlay {
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $darkblue;
+    background: linear-gradient(101deg, $darkblue 0%, $transparent 100%);
+  }
+}
+
+.cell:nth-child(#{random(30)}) {
+  .shadow .point {
+    display: block !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@for $j from 1 through 30 {
+  $limit: random(90);
+
+  .cell:nth-child(#{$limit}) {
+    .shadow {
+      display: block;
+      animation-delay: random(60)+s;
+    }
+  }
+
+  @for $i from 1 through 30 {
+    $limit2: random(90);
+
+    .cell:nth-child(#{$limit2}) {
+      @if ($limit2==$limit) {
+        .shadow {
+          display: block;
+        }
+      }
+
+      .point {
+        display: block;
+
+        @if ($i==1) {
+          animation-delay: 0s;
+        }
+
+        @else {
+          animation-delay: random(10)+s;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 30 {
+  .cell:nth-child(#{random(90)}) {
+    .shadow {
+      display: block;
+      animation: none !important;
+    }
+
+    .point {
+      display: block;
+      animation-delay: random(10)+s;
+    }
+  }
+}
+
+.cell {
+  flex: 1 0 12vh;
+  transform: translateY(-2vh);
+  position: relative;
+  border-left: solid 1px rgba(255, 255, 255, .5);
+  border-bottom: solid 1px rgba(255, 255, 255, .5);
+
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.shadow,
+.point {
+  display: none;
+  height: 7px;
+  width: 7px;
+  border-radius: 50px;
+}
+
+.point {
+  animation: animeOpacity 3s ease-in-out infinite;
+  opacity: 0;
+  background-color: $white;
+}
+
+.shadow {
+  animation: animeShadow 25s ease-in-out infinite;
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+  background-color: $transparent;
+}
+
+.form {
+  &__wrapper {
+    h1 {
+      font-weight: 500;
+      color: $white;
+      margin-bottom: 40px;
+      font-size: 30px;
+      opacity: 0;
+      animation: animeForm .3s ease-in-out forwards;
+    }
+
+    transform: translateY(-50%);
+    top: 50%;
+    min-width: 385px;
+    width: 50%;
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    border-radius: 4px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    animation: animeForm .3s ease-in-out .1s forwards;
+
+    &:nth-child(2) {
+      margin-top: 24px;
+      transition: box-shadow .25s ease-in-out;
+      box-shadow: 0 0 0 0 $transparent;
+      animation: animeForm .3s ease-in-out .2s forwards;
+
+      &:hover {
+        box-shadow: 0 0 8px $green;
+      }
+    }
+
+    input,
+    button {
+      font-weight: 500;
+      outline: none;
+      height: 53px;
+      width: 90%;
+      border: none;
+      display: block;
+      text-transform: uppercase;
+      line-height: 53px;
+      font-size: 13px;
+    }
+
+    input:nth-child(2) {
+      border-top: solid 2px $lightgrey;
+    }
+
+    button {
+      font-size: 20px;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+      background-color: $green;
+      color: $white;
+    }
+  }
+}

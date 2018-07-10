@@ -1,0 +1,1376 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500);
+
+@-webkit-keyframes animeOpacity {
+
+    0%,
+    50%,
+    to {
+        opacity: 0
+    }
+
+    20%,
+    30%,
+    70%,
+    80% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes animeOpacity {
+
+    0%,
+    50%,
+    to {
+        opacity: 0
+    }
+
+    20%,
+    30%,
+    70%,
+    80% {
+        opacity: 1
+    }
+}
+
+@keyframes animeOpacity {
+
+    0%,
+    50%,
+    to {
+        opacity: 0
+    }
+
+    20%,
+    30%,
+    70%,
+    80% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes animeShadow {
+
+    20%,
+    30%,
+    70%,
+    80% {
+        background-color: transparent;
+        -webkit-box-shadow: 0 0 0 12vh transparent;
+        box-shadow: 0 0 0 12vh transparent
+    }
+
+    0%,
+    50%,
+    to {
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 0 0 #fff;
+        box-shadow: 0 0 0 0 #fff
+    }
+}
+
+@-moz-keyframes animeShadow {
+
+    20%,
+    30%,
+    70%,
+    80% {
+        background-color: transparent;
+        box-shadow: 0 0 0 12vh transparent
+    }
+
+    0%,
+    50%,
+    to {
+        background-color: #fff;
+        box-shadow: 0 0 0 0 #fff
+    }
+}
+
+@keyframes animeShadow {
+
+    20%,
+    30%,
+    70%,
+    80% {
+        background-color: transparent;
+        -webkit-box-shadow: 0 0 0 12vh transparent;
+        box-shadow: 0 0 0 12vh transparent
+    }
+
+    0%,
+    50%,
+    to {
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 0 0 #fff;
+        box-shadow: 0 0 0 0 #fff
+    }
+}
+
+@-webkit-keyframes animeForm {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-moz-keyframes animeForm {
+    0% {
+        -moz-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0
+    }
+
+    to {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes animeForm {
+    0% {
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body,
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Poppins", sans-serif
+}
+
+.login__title {
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 4;
+    font-family: Poppins;
+    font-size: 32px;
+    color: #fff;
+    letter-spacing: 6px;
+    margin: 0
+}
+
+.main__wrapper,
+.wrapper__half {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.main__wrapper {
+    overflow: hidden;
+    background: #5b4ef8;
+    height: 100vh;
+    background-image: url(../images/river.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    width: 100%
+}
+
+.wrapper__half {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.wrapper__half--left,
+.wrapper__half--right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse
+}
+
+.wrapper__half--right {
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+
+.wrapper--overlay {
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #4a44cd;
+    background: -webkit-linear-gradient(349deg, #4a44cd 0%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(349deg, #4a44cd 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(101deg, #4a44cd 0%, rgba(255, 255, 255, 0) 100%)
+}
+
+.cell:nth-child(12) .shadow .point {
+    display: block !important;
+    -webkit-animation-delay: 0s !important;
+    -moz-animation-delay: 0s !important;
+    animation-delay: 0s !important;
+    -webkit-animation-iteration-count: 1 !important;
+    -moz-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important
+}
+
+.cell:nth-child(84) .shadow {
+    -webkit-animation-delay: 58s;
+    -moz-animation-delay: 58s;
+    animation-delay: 58s
+}
+
+.cell:nth-child(57) .shadow {
+    -webkit-animation-delay: 23s;
+    -moz-animation-delay: 23s;
+    animation-delay: 23s
+}
+
+.cell:nth-child(21) .shadow {
+    -webkit-animation-delay: 39s;
+    -moz-animation-delay: 39s;
+    animation-delay: 39s;
+    display: block
+}
+
+.cell:nth-child(45) .shadow {
+    -webkit-animation-delay: 44s;
+    -moz-animation-delay: 44s;
+    animation-delay: 44s;
+    display: block
+}
+
+.cell:nth-child(86) .shadow {
+    -webkit-animation-delay: 48s;
+    -moz-animation-delay: 48s;
+    animation-delay: 48s
+}
+
+.cell:nth-child(68) .shadow {
+    display: block;
+    -webkit-animation-delay: 14s;
+    -moz-animation-delay: 14s;
+    animation-delay: 14s
+}
+
+.cell:nth-child(16) .shadow {
+    display: block;
+    -webkit-animation-delay: 56s;
+    -moz-animation-delay: 56s;
+    animation-delay: 56s
+}
+
+.cell:nth-child(23) .shadow {
+    display: block;
+    -webkit-animation-delay: 21s;
+    -moz-animation-delay: 21s;
+    animation-delay: 21s
+}
+
+.cell:nth-child(65) .shadow {
+    display: block;
+    -webkit-animation-delay: 54s;
+    -moz-animation-delay: 54s;
+    animation-delay: 54s
+}
+
+.cell:nth-child(81) .shadow {
+    -webkit-animation-delay: 36s;
+    -moz-animation-delay: 36s;
+    animation-delay: 36s;
+    display: block
+}
+
+.cell:nth-child(33) .shadow {
+    -webkit-animation-delay: 11s;
+    -moz-animation-delay: 11s;
+    animation-delay: 11s;
+    display: block
+}
+
+.cell:nth-child(10) .shadow {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(31) .shadow {
+    -webkit-animation-delay: 49s;
+    -moz-animation-delay: 49s;
+    animation-delay: 49s;
+    display: block
+}
+
+.cell:nth-child(13) .shadow {
+    display: block;
+    -webkit-animation-delay: 26s;
+    -moz-animation-delay: 26s;
+    animation-delay: 26s
+}
+
+.cell:nth-child(27) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(25) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(40) .shadow {
+    display: block;
+    -webkit-animation-delay: 51s;
+    -moz-animation-delay: 51s;
+    animation-delay: 51s
+}
+
+.cell:nth-child(7) .shadow {
+    display: block;
+    -webkit-animation-delay: 23s;
+    -moz-animation-delay: 23s;
+    animation-delay: 23s
+}
+
+.cell:nth-child(80) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(55) .shadow {
+    display: block;
+    -webkit-animation-delay: 47s;
+    -moz-animation-delay: 47s;
+    animation-delay: 47s
+}
+
+.cell:nth-child(45) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(15) .shadow {
+    display: block;
+    -webkit-animation-delay: 44s;
+    -moz-animation-delay: 44s;
+    animation-delay: 44s
+}
+
+.cell:nth-child(32) .point {
+    display: block;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s
+}
+
+.cell:nth-child(50) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(69) .shadow {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(40) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(21) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(17) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(35) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(22) .shadow {
+    -webkit-animation-delay: 59s;
+    -moz-animation-delay: 59s;
+    animation-delay: 59s
+}
+
+.cell:nth-child(81) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(78) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(49) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(8) .shadow {
+    -webkit-animation-delay: 22s;
+    -moz-animation-delay: 22s;
+    animation-delay: 22s
+}
+
+.cell:nth-child(46) .point {
+    display: block;
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s
+}
+
+.cell:nth-child(8) .shadow {
+    display: block
+}
+
+.cell:nth-child(69) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(2) .shadow {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(42) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(67) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(26) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(63) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(25) .shadow {
+    display: block;
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    animation-delay: 30s
+}
+
+.cell:nth-child(52) .point {
+    display: block;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s
+}
+
+.cell:nth-child(61) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(11) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(18) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(47) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(1) .point {
+    display: block;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s
+}
+
+.cell:nth-child(74) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(14) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(38) .point,
+.cell:nth-child(88) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(37) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(59) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(15) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(73) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(32) .shadow {
+    display: block;
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;
+    animation-delay: 16s
+}
+
+.cell:nth-child(33) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(90) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(71) .point {
+    display: block;
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s
+}
+
+.cell:nth-child(48) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(4) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(29) .point {
+    display: block;
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s
+}
+
+.cell:nth-child(16) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(60) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(77) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(70) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(55) .point {
+    display: block;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s
+}
+
+.cell:nth-child(87) .point {
+    display: block;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s
+}
+
+.cell:nth-child(61) .shadow {
+    display: block;
+    -webkit-animation-delay: 39s;
+    -moz-animation-delay: 39s;
+    animation-delay: 39s
+}
+
+.cell:nth-child(68) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(39) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(65) .point {
+    display: block;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s
+}
+
+.cell:nth-child(2) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(43) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(20) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(41) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(6) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(7) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(19) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(3) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(56) .point {
+    display: block;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s
+}
+
+.cell:nth-child(13) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(23) .point,
+.cell:nth-child(28) .point {
+    display: block;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s
+}
+
+.cell:nth-child(36) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(12) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(31) .point {
+    display: block;
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s
+}
+
+.cell:nth-child(76) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(8) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(9) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(9) .point {
+    display: block;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s
+}
+
+.cell:nth-child(30) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(30) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(5) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(5) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(53) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(53) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(24) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(24) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(64) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(64) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(58) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(58) .point {
+    display: block;
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s
+}
+
+.cell:nth-child(82) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(82) .point {
+    display: block;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.cell:nth-child(44) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(44) .point {
+    display: block;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s
+}
+
+.cell:nth-child(34) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(34) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(84) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(84) .point {
+    display: block;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s
+}
+
+.cell:nth-child(75) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(75) .point {
+    display: block;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s
+}
+
+.cell:nth-child(51) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(51) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(22) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(22) .point {
+    display: block;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s
+}
+
+.cell:nth-child(89) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(89) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(83) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(83) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(62) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(62) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(66) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(66) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(86) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(86) .point {
+    display: block;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s
+}
+
+.cell:nth-child(57) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(57) .point {
+    display: block;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.cell:nth-child(54) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(54) .point {
+    display: block;
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s
+}
+
+.cell:nth-child(79) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(79) .point {
+    display: block;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s
+}
+
+.cell:nth-child(85) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(85) .point {
+    display: block;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.cell:nth-child(10) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(10) .point {
+    display: block;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.cell:nth-child(72) .shadow {
+    display: block;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important
+}
+
+.cell:nth-child(72) .point {
+    display: block;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s
+}
+
+.cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 12vh;
+    -moz-box-flex: 1;
+    -ms-flex: 1 0 12vh;
+    flex: 1 0 12vh;
+    -webkit-transform: translateY(-2vh);
+    -moz-transform: translateY(-2vh);
+    -ms-transform: translateY(-2vh);
+    transform: translateY(-2vh);
+    position: relative;
+    border-left: solid 1px rgba(255, 255, 255, .5);
+    border-bottom: solid 1px rgba(255, 255, 255, .5)
+}
+
+.cell:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%
+}
+
+.point,
+.shadow {
+    display: none;
+    height: 7px;
+    width: 7px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px
+}
+
+.point {
+    -webkit-animation: animeOpacity 3s ease-in-out infinite;
+    -moz-animation: animeOpacity 3s ease-in-out infinite;
+    animation: animeOpacity 3s ease-in-out infinite;
+    opacity: 0;
+    background-color: #fff
+}
+
+.shadow {
+    -webkit-animation: animeShadow 25s ease-in-out infinite;
+    -moz-animation: animeShadow 25s ease-in-out infinite;
+    animation: animeShadow 25s ease-in-out infinite;
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+    background-color: transparent
+}
+
+.form__wrapper {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    min-width: 385px;
+    width: 50%;
+    position: absolute;
+    z-index: 4;
+    text-align: center
+}
+
+.form__wrapper h1 {
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 30px;
+    opacity: 0;
+    -webkit-animation: animeForm .3s ease-in-out forwards;
+    -moz-animation: animeForm .3s ease-in-out forwards;
+    animation: animeForm .3s ease-in-out forwards
+}
+
+.form__group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+    -webkit-animation: animeForm .3s ease-in-out .1s forwards;
+    -moz-animation: animeForm .3s ease-in-out .1s forwards;
+    animation: animeForm .3s ease-in-out .1s forwards
+}
+
+.form__group:nth-child(2) {
+    margin-top: 24px;
+    -webkit-transition: -webkit-box-shadow .25s ease-in-out;
+    -moz-transition: box-shadow .25s ease-in-out;
+    transition: box-shadow .25s ease-in-out;
+    transition: box-shadow .25s ease-in-out, -webkit-box-shadow .25s ease-in-out;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-animation: animeForm .3s ease-in-out .2s forwards;
+    -moz-animation: animeForm .3s ease-in-out .2s forwards;
+    animation: animeForm .3s ease-in-out .2s forwards
+}
+
+.form__group:nth-child(2):hover {
+    -webkit-box-shadow: 0 0 8px #31daa9;
+    box-shadow: 0 0 8px #31daa9
+}
+
+.form__group input {
+    width: 90%;
+    font-size: 13px
+}
+
+.form__group button,
+.form__group input {
+    font-weight: 500;
+    outline: 0;
+    height: 53px;
+    border: 0;
+    display: block;
+    text-transform: uppercase;
+    line-height: 53px
+}
+
+.form__group input:nth-child(2) {
+    border-top: solid 2px #e5e5e5
+}
+
+.form__group button {
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #31daa9;
+    color: #fff
+}

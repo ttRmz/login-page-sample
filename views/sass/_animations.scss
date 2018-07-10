@@ -1,0 +1,40 @@
+@keyframes animeOpacity {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  20%,
+  30%,
+  70%,
+  80% {
+    opacity: 1;
+  }
+}
+
+@keyframes animeShadow {
+  20%,
+  30%,
+  70%,
+  80% {
+    background-color: $transparent;
+    box-shadow: 0 0 0 12vh $transparent;
+  }
+  0%,
+  50%,
+  100% {
+    background-color: $white;
+    box-shadow: 0 0 0 0px $white;
+  }
+}
+
+@keyframes animeForm {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);    
+    opacity: 1;
+  }
+}
